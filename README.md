@@ -13,7 +13,19 @@ Key Features
 Usage
 -----
  
-TODO
+	ConnectorClient client = new ConnectorClient(APPID,APPSECRET);
+	Message message = new Message()
+	        .withFrom(bots4jChannelAccount())
+	        .withTo(devportalChannelAccount())
+	        .withText("This is a test message from bots4j")
+	        .withLanguage("en")
+	        .putInBotConversationData("test1", "one")
+	        .putInBotPerUserInConversationData("test2","two")
+	        .putInBotUserData("test3","three");
+	
+	
+	Message reply = client.Messages.sendMessage(message);
+
 
 Questions and Issues
 --------------------
