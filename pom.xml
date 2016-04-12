@@ -6,7 +6,7 @@
 
     <groupId>org.bots4j</groupId>
     <artifactId>msbotframework</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
     <dependencies>
         <dependency>
@@ -116,20 +116,17 @@
 
     <repositories>
         <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-bots4j-bots4j</id>
+            <id>bintray-bots4j-maven-repo</id>
             <name>bintray</name>
-            <url>http://dl.bintray.com/bots4j/bots4j</url>
+            <url>http://dl.bintray.com/bots4j/maven-repo</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
-            <id>bintray-bots4j-bots4j</id>
-            <name>bots4j-bots4j</name>
-            <url>https://api.bintray.com/maven/bots4j/bots4j/org.bots4j.msbotframework/;publish=1</url>
+            <id>bintray-bots4j-maven-repo</id>
+            <name>bots4j-maven-repo</name>
+            <url>https://api.bintray.com/maven/bots4j/maven-repo/msbotframework/;publish=1</url>
         </repository>
     </distributionManagement>
 </project>
