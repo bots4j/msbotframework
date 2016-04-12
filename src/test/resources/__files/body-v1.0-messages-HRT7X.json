@@ -1,0 +1,67 @@
+{
+  "type": "Message",
+  "id": "8b6CvQY9sd0",
+  "conversationId": "FETCcaAeZBGEr2aznv20UG8a20kGNmEan6Ea8wc8Va3Bb",
+  "created": "2016-04-12T09:04:34.4471424Z",
+  "sourceText": "This is a test message from bots4j\n\n@devportal The message was delivered to new ChannelConversationId:JKwwgL8b0aN",
+  "sourceLanguage": "en",
+  "language": "en",
+  "text": "This is a test message from bots4j\n\n@devportal The message was delivered to new ChannelConversationId:JKwwgL8b0aN",
+  "attachments": [],
+  "from": {
+    "name": "devportal",
+    "channelId": "test",
+    "address": "devportal",
+    "id": "JMQ0KLCKN6R",
+    "isBot": false
+  },
+  "to": {
+    "name": "bots4j",
+    "channelId": "test",
+    "address": "bots4j",
+    "id": "bots4j",
+    "isBot": true
+  },
+  "replyToMessageId": "LW81fNmWVOZ",
+  "participants": [
+    {
+      "name": "bots4j",
+      "channelId": "test",
+      "address": "bots4j",
+      "id": "bots4j",
+      "isBot": true
+    },
+    {
+      "name": "devportal",
+      "channelId": "test",
+      "address": "devportal",
+      "id": "JMQ0KLCKN6R",
+      "isBot": false
+    }
+  ],
+  "totalParticipants": 2,
+  "mentions": [
+    {
+      "mentioned": {
+        "name": "devportal",
+        "channelId": "test",
+        "address": "devportal",
+        "id": "JMQ0KLCKN6R",
+        "isBot": false
+      },
+      "text": "@devportal"
+    }
+  ],
+  "channelMessageId": "LpV6YOfBQTB",
+  "channelConversationId": "JKwwgL8b0aN",
+  "botUserData": {
+    "test3": "three"
+  },
+  "botConversationData": {
+    "test1": "one"
+  },
+  "botPerUserInConversationData": {
+    "test2": "two"
+  },
+  "hashtags": []
+}

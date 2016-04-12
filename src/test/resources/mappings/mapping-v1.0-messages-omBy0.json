@@ -1,0 +1,25 @@
+{
+  "request" : {
+    "url" : "/bot/v1.0/messages",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"attachments\":[],\"from\":{\"address\":\"bots4j\",\"channelId\":\"test\",\"id\":\"bots4j\",\"isBot\":true,\"name\":\"Bots4J\"},\"hashtags\":[],\"language\":\"en\",\"mentions\":[],\"participants\":[],\"text\":\"This is a test message from bots4j\",\"to\":{\"address\":\"devportal\",\"channelId\":\"test\",\"id\":\"JMQ0KLCKN6R\",\"isBot\":false,\"name\":\"devportal\"}}",
+      "jsonCompareMode" : "STRICT"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-v1.0-messages-omBy0.json",
+    "headers" : {
+      "Cache-Control" : "no-cache",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Expires" : "-1",
+      "Vary" : "Accept-Encoding",
+      "X-Content-Type-Options" : "nosniff",
+      "Set-Cookie" : "ARRAffinity=375e97e25b6e100a308f66d3503d0e5f87cd9499b7cdfdcb521731d8b0949e70;Path=/;Domain=bc-api.trafficmanager.net",
+      "X-Powered-By" : "ASP.NET",
+      "Date" : "Tue, 12 Apr 2016 08:41:32 GMT"
+    }
+  }
+}
