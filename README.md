@@ -8,7 +8,7 @@ Provides a Java API that is similar to the examples found at [http://docs.botfra
 Key Features
 ------------
 	
--	POJO Beans for sending Message objects into the MS Bot Framework API
+-	POJO Beans for sending Message objects into the MS Bot Connector REST API
 
 Usage
 -----
@@ -25,6 +25,28 @@ Usage
 	
 	
 	Message reply = client.Messages.sendMessage(message);
+	
+Maven Config
+============
+
+Add this repo:
+
+    <repositories>
+        <repository>
+            <id>bintray-bots4j-maven-repo</id>
+            <name>bintray</name>
+            <url>http://dl.bintray.com/bots4j/maven-repo</url>
+        </repository>
+    </repositories>
+
+Add this dependency:
+
+    <dependency>
+      <groupId>org.bots4j</groupId>
+      <artifactId>msbotframework</artifactId>
+      <version>0.1</version>
+    </dependency>
+    
 
 
 Questions and Issues
