@@ -44,7 +44,7 @@ Add this dependency:
     <dependency>
       <groupId>org.bots4j</groupId>
       <artifactId>msbotframework</artifactId>
-      <version>0.1</version>
+      <version>0.11</version>
     </dependency>
     
 

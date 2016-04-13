@@ -16,8 +16,13 @@ package org.bots4j.msbotframework.beans;
  * limitations under the License.
  */
 
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.client.util.Key;
 
+import org.bots4j.utils.json.FlexibleMap;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -62,13 +67,13 @@ public class Message {
     @Key
     private String channelConversationId;
     @Key
-    private Map<String,Object> channelData;
+    private FlexibleMap channelData;
     @Key
-    private Map<String,Object> botUserData;
+    private FlexibleMap botUserData;
     @Key
-    private Map<String,Object> botConversationData;
+    private FlexibleMap botConversationData;
     @Key
-    private Map<String,Object> botPerUserInConversationData;
+    private FlexibleMap botPerUserInConversationData;
     @Key
     private Location location;
     @Key
@@ -495,7 +500,7 @@ public class Message {
      * @return
      *     The channelData
      */
-    public Map<String,Object> getChannelData() {
+    public FlexibleMap getChannelData() {
         return channelData;
     }
 
@@ -504,11 +509,11 @@ public class Message {
      * @param channelData
      *     The channelData
      */
-    public void setChannelData(Map<String,Object> channelData) {
+    public void setChannelData(FlexibleMap channelData) {
         this.channelData = channelData;
     }
 
-    public Message withChannelData(Map<String,Object> channelData) {
+    public Message withChannelData(FlexibleMap channelData) {
         this.channelData = channelData;
         return this;
     }
@@ -518,7 +523,7 @@ public class Message {
      * @return
      *     The botUserData
      */
-    public Map<String,Object> getBotUserData() {
+    public FlexibleMap getBotUserData() {
         return botUserData;
     }
 
@@ -527,11 +532,11 @@ public class Message {
      * @param botUserData
      *     The botUserData
      */
-    public void setBotUserData(Map<String,Object> botUserData) {
+    public void setBotUserData(FlexibleMap botUserData) {
         this.botUserData = botUserData;
     }
 
-    public Message withBotUserData(Map<String,Object> botUserData) {
+    public Message withBotUserData(FlexibleMap botUserData) {
         this.botUserData = botUserData;
         return this;
     }
@@ -541,9 +546,9 @@ public class Message {
         return this;
     }
 
-    public Map<String,Object> ensureBotUserData() {
+    public FlexibleMap ensureBotUserData() {
         if (botUserData==null){
-            botUserData = new LinkedHashMap<>();
+            botUserData = new FlexibleMap();
         }
         return botUserData;
     }
@@ -553,7 +558,7 @@ public class Message {
      * @return
      *     The botConversationData
      */
-    public Map<String,Object> getBotConversationData() {
+    public FlexibleMap getBotConversationData() {
         return botConversationData;
     }
 
@@ -562,11 +567,11 @@ public class Message {
      * @param botConversationData
      *     The botConversationData
      */
-    public void setBotConversationData(Map<String,Object> botConversationData) {
+    public void setBotConversationData(FlexibleMap botConversationData) {
         this.botConversationData = botConversationData;
     }
 
-    public Message withBotConversationData(Map<String,Object> botConversationData) {
+    public Message withBotConversationData(FlexibleMap botConversationData) {
         this.botConversationData = botConversationData;
         return this;
     }
@@ -576,9 +581,9 @@ public class Message {
         return this;
     }
 
-    public Map<String,Object> ensureBotConversationData() {
+    public FlexibleMap ensureBotConversationData() {
         if (botConversationData==null){
-            botConversationData = new LinkedHashMap<>();
+            botConversationData = new FlexibleMap();
         }
         return botConversationData;
     }
@@ -588,7 +593,7 @@ public class Message {
      * @return
      *     The botPerUserInConversationData
      */
-    public Map<String,Object> getBotPerUserInConversationData() {
+    public FlexibleMap getBotPerUserInConversationData() {
         return botPerUserInConversationData;
     }
 
@@ -597,11 +602,11 @@ public class Message {
      * @param botPerUserInConversationData
      *     The botPerUserInConversationData
      */
-    public void setBotPerUserInConversationData(Map<String,Object> botPerUserInConversationData) {
+    public void setBotPerUserInConversationData(FlexibleMap botPerUserInConversationData) {
         this.botPerUserInConversationData = botPerUserInConversationData;
     }
 
-    public Message withBotPerUserInConversationData(Map<String,Object> botPerUserInConversationData) {
+    public Message withBotPerUserInConversationData(FlexibleMap botPerUserInConversationData) {
         this.botPerUserInConversationData = botPerUserInConversationData;
         return this;
     }
@@ -611,9 +616,9 @@ public class Message {
         return this;
     }
 
-    public Map<String,Object> ensureBotPerUserInConversationData() {
+    public FlexibleMap ensureBotPerUserInConversationData() {
         if (botPerUserInConversationData==null){
-            botPerUserInConversationData = new LinkedHashMap<>();
+            botPerUserInConversationData = new FlexibleMap();
         }
         return botPerUserInConversationData;
     }
@@ -696,5 +701,4 @@ public class Message {
                 .withText(text)
                 .withType(getType());
     }
-
 }

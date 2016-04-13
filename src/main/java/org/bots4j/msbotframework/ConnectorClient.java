@@ -54,7 +54,7 @@ public class ConnectorClient {
 
     private static final String BASE_URL = "https://api.botframework.com";
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
-    private static final JsonFactory JSON_FACTORY = new GsonFactory();
+    private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
 
     private String baseUrl;
     private String appId;

@@ -56,4 +56,28 @@ public class MessagesIntegrationTest {
         assertEquals("two",reply.getBotPerUserInConversationData().get("test2"));
         assertEquals("three",reply.getBotUserData().get("test3"));
     }
+
+    @Test
+    public void testCustomDataIsReflected(){
+        ConnectorClient client = connectorClient();
+
+        CustomDataObject myCustomData = new CustomDataObject().setName("harry").setCount(11);
+
+        Message message = new Message()
+                .withFrom(bots4jChannelAccount())
+                .withTo(devportalChannelAccount())
+                .withText("This is another test message from bots4j")
+                .withLanguage("en")
+                .putInBotConversationData("myCustomData", myCustomData);
+
+
+        Message reply = client.Messages.sendMessage(message);
+        assertNotNull(reply.getChannelMessageId());
+
+        CustomDataObject myDataReflected = reply.getBotConversationData().getAs("myCustomData", CustomDataObject.class);
+
+        assertEquals("harry", myDataReflected.getName());
+        assertEquals(11l, (long)myDataReflected.getCount());
+
+    }
 }
